@@ -1,3 +1,15 @@
+#carouselExampleControls{
+    margin-top: 30px;
+}
 .none{
-    display: none;
+    /* display: none; */
+}
+.none div{
+    margin: 0;
+    padding: 0%;
+}
+.none img{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
 }
