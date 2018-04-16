@@ -1,3 +1,5 @@
+
+
 #carouselExampleControls{
     margin-top: 30px;
 }
@@ -7,9 +9,41 @@
 .none div{
     margin: 0;
     padding: 0%;
+    /* position: relative; */
 }
 .none img{
     margin: 0%;
     padding: 0%;
     width: 100%;
+}
+.red{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 0, 0.15);
+    display: none;
+}
+.red a{
+    text-decoration: none;
+    font-size: 72px;
+    font-family: 'Caveat', cursive;
+    color: red;
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.none div:hover .red{
+    display: block;
+}
+
+footer{
+    height: 60px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
 }
