@@ -1,22 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* nav */
+h1{
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    padding: 0;
+    margin: 0;
+    color: blue;
+}
+#navbarSupportedContent a{
+    color: red;
+}
+.carousel-caption h2{
+    color: red;
+    margin-bottom: 150px;
+}
 
 
-#carouselExampleControls{
-    margin-top: 30px;
-}
-.none{
-    /* display: none; */
-}
-.none div{
+
+/* block 4 rubric */
+.wraper-block-rubric div{
     margin: 0;
     padding: 0%;
-    /* position: relative; */
 }
-.none img{
+.wraper-block-rubric img{
     margin: 0%;
     padding: 0%;
     width: 100%;
 }
-.red{
+.wraper-red-rgba{
     position: absolute;
     top: 0%;
     left: 0;
@@ -25,9 +40,9 @@
     background: rgba(255, 0, 0, 0.15);
     display: none;
 }
-.red a{
+.wraper-red-rgba a{
     text-decoration: none;
-    font-size: 72px;
+    font-size: 82px;
     font-family: 'Caveat', cursive;
     color: red;
     display: block;
@@ -37,13 +52,45 @@
     justify-content: center;
     align-items: center;
 }
-.none div:hover .red{
+.wraper-block-rubric div:hover .wraper-red-rgba{
     display: block;
 }
+
+
+/* media */
+@media (max-width: 1280px) {
+    .wraper-red-rgba a{
+        font-size: 72px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 80px;
+    }
+}
+@media (max-width: 992px){
+    .wraper-red-rgba a{
+        font-size: 62px;
+    }
+    .wraper-red-rgba{
+        display: block;
+        background: rgba(255, 0, 0, 0.1);
+    }
+    #carouselExampleControls{
+        margin-top: 55px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 50px;
+    }
+}
+
+
 
 footer{
     height: 60px;
     background-color: gray;
     display: flex;
     align-items: center;
+}
+footer p{
+    margin: 0;
+    padding: 0;
 }
