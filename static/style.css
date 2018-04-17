@@ -25,11 +25,13 @@ h1{
 .wraper-block-rubric div{
     margin: 0;
     padding: 0%;
+    overflow: hidden;
 }
 .wraper-block-rubric img{
     margin: 0%;
     padding: 0%;
     width: 100%;
+    transition: all 1s;
 }
 .wraper-red-rgba{
     position: absolute;
@@ -55,6 +57,11 @@ h1{
 .wraper-block-rubric div:hover .wraper-red-rgba{
     display: block;
 }
+.wraper-block-rubric div:hover img{
+    transform: scale(1.05);
+    transition: all 1s;
+}
+
 
 
 /* media */
@@ -81,8 +88,19 @@ h1{
         margin-bottom: 50px;
     }
 }
-
-
+@media (max-width: 768px) {
+    .wraper-red-rgba a{
+        font-size: 52px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .wraper-red-rgba a{
+        font-size: 42px;
+    }
+}
 
 footer{
     height: 60px;
