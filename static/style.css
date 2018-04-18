@@ -22,18 +22,18 @@ h1{
 
 
 /* block 4 rubric */
-.wraper-block-rubric div{
+.wrapper-block-rubric div{
     margin: 0;
     padding: 0%;
     overflow: hidden;
 }
-.wraper-block-rubric img{
+.wrapper-block-rubric img{
     margin: 0%;
     padding: 0%;
     width: 100%;
     transition: all 1s;
 }
-.wraper-red-rgba{
+.wrapper-red-rgba{
     position: absolute;
     top: 0%;
     left: 0;
@@ -42,7 +42,7 @@ h1{
     background: rgba(255, 0, 0, 0.15);
     display: none;
 }
-.wraper-red-rgba a{
+.wrapper-red-rgba a{
     text-decoration: none;
     font-size: 82px;
     font-family: 'Caveat', cursive;
@@ -54,15 +54,40 @@ h1{
     justify-content: center;
     align-items: center;
 }
-.wraper-block-rubric div:hover .wraper-red-rgba{
+.wrapper-block-rubric div:hover .wrapper-red-rgba{
     display: block;
 }
-.wraper-block-rubric div:hover img{
+.wrapper-block-rubric div:hover img{
     transform: scale(1.05);
     transition: all 1s;
 }
 
-
+/* price all */
+.wrapper-block-price{
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+.wrapper-block-price img{
+    width: 100%;
+    height: auto;
+    transition: all 1s;
+}
+.wrapper-block-price h3{
+    background: rgba(255, 0, 0, 0.4);
+    padding: 10px;
+}
+.wrapper-block-price p{
+    background: rgba(0, 0, 255, 0.4);
+    margin-top: 8px;
+}
+.wrapper-block-price:hover img{
+    transform: scale(1.05);
+}
+.wrapper-img-price{
+    overflow: hidden;
+    transition: all 1s;
+}
 
 /* media */
 @media (max-width: 1280px) {
