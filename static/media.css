@@ -1,0 +1,36 @@
+@media (max-width: 1280px) {
+    .wrapper-red-rgba a{
+        font-size: 72px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 80px;
+    }
+}
+@media (max-width: 992px){
+    .wrapper-red-rgba a{
+        font-size: 62px;
+    }
+    .wrapper-red-rgba{
+        display: block;
+        background: rgba(255, 0, 0, 0.1);
+    }
+    #carouselExampleControls{
+        margin-top: 55px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 768px) {
+    .wrapper-red-rgba a{
+        font-size: 52px;
+    }
+    .carousel-caption h2{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 576px) {
+    .wrapper-red-rgba a{
+        font-size: 42px;
+    }
+}
