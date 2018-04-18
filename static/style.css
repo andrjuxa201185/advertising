@@ -50,9 +50,11 @@ h1{
     display: block;
     width: 100%;
     height: 100%;
+    display: inline-block;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .wrapper-block-rubric div:hover .wrapper-red-rgba{
     display: block;
@@ -89,49 +91,12 @@ h1{
     transition: all 1s;
 }
 
-/* media */
-@media (max-width: 1280px) {
-    .wraper-red-rgba a{
-        font-size: 72px;
-    }
-    .carousel-caption h2{
-        margin-bottom: 80px;
-    }
-}
-@media (max-width: 992px){
-    .wraper-red-rgba a{
-        font-size: 62px;
-    }
-    .wraper-red-rgba{
-        display: block;
-        background: rgba(255, 0, 0, 0.1);
-    }
-    #carouselExampleControls{
-        margin-top: 55px;
-    }
-    .carousel-caption h2{
-        margin-bottom: 50px;
-    }
-}
-@media (max-width: 768px) {
-    .wraper-red-rgba a{
-        font-size: 52px;
-    }
-    .carousel-caption h2{
-        margin-bottom: 30px;
-    }
-}
-@media (max-width: 576px) {
-    .wraper-red-rgba a{
-        font-size: 42px;
-    }
-}
-
 footer{
     height: 60px;
     background-color: gray;
     display: flex;
     align-items: center;
+    margin-bottom: 0%;
 }
 footer p{
     margin: 0;
