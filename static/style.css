@@ -4,15 +4,28 @@
 }
 /* nav */
 h1{
-    font-size: inherit;
+    /* font-size: inherit; */
     font-family: inherit;
     font-weight: inherit;
     padding: 0;
     margin: 0;
-    color: blue;
+    color: rgb(65, 65, 252);
+    position: relative;
 }
-#navbarSupportedContent a{
-    color: red;
+h1 span{
+    margin: 0%;
+    padding: 0%;
+    color: rgb(255, 37, 37);
+    display: block;
+    position: absolute;
+    font-size: 26px;
+    font-family: 'Caveat', cursive;
+    top: 30px;
+    left: 160px;
+    font-weight: bold;
+}
+#carouselExampleControls{
+    margin-top: 50px;
 }
 .carousel-caption h2{
     color: red;
@@ -64,43 +77,30 @@ h1{
     transition: all 1s;
 }
 
-/* price all */
-.wrapper-block-price{
-    padding: 5px;
-    text-align: center;
-    position: relative;
-}
-.wrapper-block-price img{
-    width: 100%;
-    height: auto;
-    transition: all 1s;
-}
-.wrapper-block-price h3{
-    background: rgba(255, 0, 0, 0.4);
-    padding: 10px;
-}
-.wrapper-block-price p{
-    background: rgba(0, 0, 255, 0.4);
-    margin-top: 8px;
-}
-.wrapper-block-price:hover img{
-    transform: scale(1.05);
-}
-.wrapper-img-price{
-    overflow: hidden;
-    transition: all 1s;
-}
 
 /* table-price */
-
-
+.wrapper-bg-fixed{
+    background: url('../static/img/plumbing-840835_1280.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.wrapper-price{
+    opacity: 0.97;
+}
+.wrapper-price h2{
+    margin: 20px;
+    font-size: 38px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 1px -1px 2px rgba(0, 0, 255, 0.493), -1px 1px 2px rgba(255, 0, 0, 0.384);
+}
 
 footer{
     height: 60px;
     background-color: gray;
     display: flex;
     align-items: center;
-    margin-bottom: 0%;
 }
 footer p{
     margin: 0;

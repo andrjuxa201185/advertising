@@ -20,6 +20,16 @@
     .carousel-caption h2{
         margin-bottom: 50px;
     }
+    .wrapper-price h2{
+        margin: 10px;
+        font-size: 30px;
+    }
+    .wrapper-price th{
+        padding: 5px;
+    }
+    .wrapper-price td{
+        padding: 5px;
+    }
 }
 @media (max-width: 768px) {
     .wrapper-red-rgba a{
@@ -28,9 +38,15 @@
     .carousel-caption h2{
         margin-bottom: 30px;
     }
+    #carouselExampleControls{
+        margin-top: 65px;
+    }
 }
 @media (max-width: 576px) {
     .wrapper-red-rgba a{
         font-size: 42px;
+    }
+    #carouselExampleControls{
+        margin-top: 72px;
     }
 }
