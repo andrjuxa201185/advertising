@@ -32,6 +32,12 @@
     .wrapper-price td{
         padding: 5px;
     }
+    .wrapper-contact{
+        height: auto;
+    }
+    .form-group{
+        margin: 10px;
+    }
 }
 
 
@@ -50,6 +56,12 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    .form-group{
+        margin: 5px;
+    }
+    .wrapper-contact-rubric{
+        margin-bottom: 10px;
     }
 }
 
@@ -80,5 +92,24 @@
     .wrapper-price td{
         padding: 2px;
         font-size: 12px;
+    }
+    .form-group{
+        margin: 2px;
+    }
+    .col-form-label{
+        padding: 0%;
+    }
+    .col-sm-10{
+        padding: 0%;
+    }
+    .h3-contact{
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    .contact-header{
+        font-size: 16px;
+    }
+    .wrapper-contact{
+        padding: 5px;
     }
 }

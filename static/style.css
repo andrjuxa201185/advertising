@@ -109,12 +109,25 @@ footer p{
 
 /* contact */
 .h3-contact{
-    margin: 25px 0;
+    margin: 25px 0 25px 20px;
+
 }
 #sendMessageForm{
     margin-bottom: 30px;
 }
-.contact{
-    background: rgb(224, 224, 143);
+.wrapper-contact{
+    background-color: papayawhip;
     height: 500px;
+    padding: 20px;
+}
+.contact-header{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0;
+}
+.contact-info{
+    margin: 0%;
+}
+.wrapper-contact-rubric{
+    margin-bottom: 30px;
 }
