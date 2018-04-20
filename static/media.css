@@ -63,6 +63,20 @@
     .wrapper-contact-rubric{
         margin-bottom: 10px;
     }
+    .wrapper-call-me{
+        margin: 10px 0;
+        padding: 3px;
+    }
+    .wrapper-call-me span{
+        font-size: 22px;
+    }
+    .wrapper-call-me img{
+       width: 64px;
+       height: auto; 
+    }
+    .wrapper-block-rubric{
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -72,6 +86,7 @@
     }
     h1{
         font-size: 32px;
+        margin-left: 0%;
     }
     h1 span{
         font-size: 20px;
@@ -111,5 +126,17 @@
     }
     .wrapper-contact{
         padding: 5px;
+    }
+    .wrapper-call-me{
+        margin: 5px 0;
+        padding: 3px 0;
+    }
+    .wrapper-call-me span{
+        font-size: 16px;
+        margin-right: 0px;
+    }
+    .wrapper-call-me img{
+       width: 40px;
+       height: auto; 
     }
 }
