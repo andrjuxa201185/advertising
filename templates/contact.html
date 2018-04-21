@@ -17,39 +17,88 @@
 </head>
 
 <body>
-  <div class="wrapper-bg-fixed">
-    <nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="#"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Цены</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
+  <nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Цены</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Контакты</a>
+            </li>
+          </ul>
         </div>
-    </nav>
-    
+      </div>
+  </nav>
+  
+
+  <main class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="h3-contact">Ваш вопрос</h3>
+          <form action="#" method="post" id="sendMessageForm" enctype="multipart/form-data">
+            <div class="form-group row">
+                <label for="input" class="col-sm-2 col-form-label">Заголовок<span class="star">*</span></label>
+                <div class="col-sm-10">
+                    <input type="text" name="header" class="form-control" required placeholder="Заголовок вашего объявления">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="Textarea" class="col-sm-2 col-form-label">Описание<span class="star">*</span></label>
+                <div class="col-sm-10">
+                    <textarea class="form-control valid" name="text" rows="10" maxlength="700" required></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="file" class="col-sm-2 col-form-label">Фото <span class="span-file">(max=4MB)</span></label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="file" name="file" title="jpg, pdf, gif">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email<span class="star">*</span></label>
+                <div class="col-sm-10">
+                  <input type="email" name="email" class="form-control valid" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputtel" class="col-sm-2 col-form-label">Телефон<span class="star">*</span></label>
+                <div class="col-sm-10">
+                    <input type="tel" name="phone" class="form-control" placeholder="Контактный номер телефона" title="+38-0xx-xxx-xx-xx" required>
+                </div>
+            </div>
+            <div class="right-button">
+                <button type="submit" id="submit" class="btn btn-primary">Опубликовать</button>
+            </div>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+
+      </div>
+    </div>
+
+  </main>
 
 
     
 
 
 
-<footer><div class="container">
-<p>Сантехработы Харьков 2018</p></div>
-</footer>
-</div>
-</body>
+  <footer>
+    <div class="container">
+      <p>Сантехработы Харьков 2018</p>
+    </div>
+  </footer>
+
+  </body>
 </html>
