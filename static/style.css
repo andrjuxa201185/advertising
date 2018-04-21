@@ -28,15 +28,15 @@ h1 span{
     transition: all 1s;
 }
 #carouselExampleControls{
-    margin-top: 50px;
-    transition: all 0.2s;
+    margin-top: 40px;
+    transition: all 1s;
 }
 .carousel-caption h2{
     color: red;
     margin-bottom: 150px;
 }
 nav{
-    transition: all 0.2s;
+    transition: all 1s;
 }
 
 
