@@ -17,6 +17,7 @@ function changeClassNavFixed(){
     }
 }
 
+
 function lessNavbar(){
     let scrY = window.pageYOffset;
     let span = document.querySelector("h1 span");
