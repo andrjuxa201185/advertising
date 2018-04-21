@@ -1,5 +1,6 @@
 $(document).ready(function() {
     changeClassNavFixed();
+    lessNavbar();
     window.addEventListener('resize', changeClassNavFixed);
     window.addEventListener('scroll', lessNavbar);
 });
