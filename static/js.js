@@ -1,20 +1,20 @@
 $(document).ready(function() {
-    changeClassNavFixed();
+    // changeNavFixed();
     lessNavbar();
-    window.addEventListener('resize', changeClassNavFixed);
+    // window.addEventListener('resize', changeNavFixed);
     window.addEventListener('scroll', lessNavbar);
     window.addEventListener('resize', lessNavbar);
 });
 
 
-function changeClassNavFixed(){
-    let nav = document.querySelector('#navbar');
-    if (window.innerWidth <= 768){
-        nav.style.position = 'relative';
-    }else{
-        nav.style.position = 'fixed';
-    }
-}
+// function changeNavFixed(){
+//     let nav = document.querySelector('#navbar');
+//     if (window.innerWidth <= 768){
+//         nav.style.position = 'relative';
+//     }else{
+//         nav.style.position = 'fixed';
+//     }
+// };
 
 
 function lessNavbar(){
@@ -22,7 +22,6 @@ function lessNavbar(){
     let span = document.querySelector("h1 span");
     let navbar = document.getElementById("navbar");
     let h1 = document.querySelector("h1");
-
     if (window.innerWidth > 768){
         if (scrY > 80){
             span.classList.add('display-hidden-span');
@@ -34,7 +33,6 @@ function lessNavbar(){
             navbar.classList.remove('less-navbar');
             h1.classList.remove('less-font-h1');
             navbar.classList.remove('navbar-expand-md');
-        }
-    }
-
-}
+        };
+    };
+};
