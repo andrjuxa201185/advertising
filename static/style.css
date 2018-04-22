@@ -28,8 +28,9 @@ h1 span{
     transition: all 1s;
 }
 #carouselExampleControls{
-    margin-top: 40px;
+    margin-top: 10px;
     transition: all 1s;
+    border-top: solid 40px #343a40;
 }
 .carousel-caption h2{
     color: red;
@@ -95,6 +96,7 @@ nav{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 75px;
 }
 .wrapper-price{
     opacity: 0.97;
@@ -186,3 +188,4 @@ footer p{
     transition: all 1s;
     margin-left: 50px;
 }
+

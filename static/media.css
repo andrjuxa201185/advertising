@@ -17,10 +17,11 @@
         background: rgba(255, 0, 0, 0.1);
     }
     #carouselExampleControls{
-        margin-top: 50px;
+        margin-top: 20px;
+        transition: all 1s;
     }
     .carousel-caption h2{
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     .wrapper-price h2{
         margin: 10px;
@@ -45,29 +46,15 @@
     .wrapper-red-rgba a{
         font-size: 52px;
     }
-    h1{
-        transition: none;
-    }
-    h1 span{
-        transition: none;
-    }
-    nav{
-        transition: none;
-    }
-    #navbar{
-        position: relative;
-    }
     .carousel-caption h2{
         margin-bottom: 30px;
-    }
-    #carouselExampleControls{
-        margin-top: 0px;
     }
     .wrapper-bg-fixed{
         background: url('../static/img/plumbing-840835_640.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+        padding-top: 75px;
     }
     .form-group{
         margin: 5px;
@@ -78,6 +65,7 @@
     .wrapper-call-me{
         margin: 10px 0;
         padding: 3px;
+        transition: none;
     }
     .wrapper-call-me span{
         font-size: 22px;
@@ -110,6 +98,24 @@
     .nav-class{
         padding-left: 0px;
         padding-right: 0%;
+    }
+    nav{
+        transition: none;
+    }
+    .wrapper-bg-fixed{
+        background: url('../static/img/plumbing-840835_640.jpg');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 0px;
+    }
+    #navbar{
+        position: relative;
+    }
+    #carouselExampleControls{
+        margin-top: 0px;
+        border: none;
+        transition: none;
     }
     .wrapper-price h2{
         margin: 3px;
