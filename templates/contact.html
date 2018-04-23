@@ -1,39 +1,23 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <link rel="stylesheet" href="../static/bootstrap.min.css">
-    <script src="../static/jQuery 3.3.1.js"></script>
-    <script src="../static/popper.min.js"></script>
-    <script src="../static/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="../static/media.css">
-    <script src="../static/js.js"></script>
-    <title>сантехработы</title>
-</head>
+{% extends "layout.html" %}
+{%block main%}
 
-<body>
   <nav class="navbar navbar-default navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
+        <a class="navbar-brand" href="/"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/price">Цены</a>
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Цены</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
+                <a class="nav-link" href="/contact">Контакты<span class="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -44,7 +28,8 @@
     <div class="row wrapper-contact-rubric">
       <div class="col-lg-6">
         <h3 class="h3-contact">Ваш вопрос</h3>
-          <form action="#" method="post" id="sendMessageForm" enctype="multipart/form-data">
+
+          <form action="/contact" method="post" id="sendMessageForm" enctype="multipart/form-data">
             <div class="form-group row">
                 <label for="input" class="col-sm-2 col-form-label">Имя<span class="star">*</span></label>
                 <div class="col-sm-10">
@@ -113,5 +98,4 @@
     </div>
   </footer>
 
-  </body>
-</html>
+{%endblock%}

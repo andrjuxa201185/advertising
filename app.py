@@ -32,9 +32,12 @@ def price():
     return render_template('price.html')
 
 
-@app.route('/contact')
+@app.route('/contact', methods = ["GET", "POST"])
 def contact():
-    return render_template('contact.html')
+    if request.method == "GET":
+        return render_template('contact.html')
+    else:
+        pass
 
 
 

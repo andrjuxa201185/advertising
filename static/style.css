@@ -110,7 +110,9 @@ nav{
     text-shadow: 1px -1px 1px rgba(0, 0, 255, 0.336);
     text-decoration: underline;
 }
-
+.wrapper-price table{
+    margin-bottom: 80px;
+}
 
 /* call-me-bottom */
 .wrapper-call-me{

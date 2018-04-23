@@ -1,40 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="Cache-Control" content="no-cache">
-    <link rel="stylesheet" href="../static/bootstrap.min.css">
-    <script src="../static/jQuery 3.3.1.js"></script>
-    <script src="../static/popper.min.js"></script>
-    <script src="../static/bootstrap.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" href="../static/media.css">
-    <script src="../static/js.js"></script>
-    <title>сантехработы</title>
-</head>
+{% extends "layout.html" %}
+{%block main%}
 
-<body>
   <div class="wrapper-bg-fixed">
     <nav id="navbar" class="navbar navbar-default fixed-top navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
+        <a class="navbar-brand" href="/"><h1>Сантехработы<span>х а р ь к о в</span></h1></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Главная</a>
+            </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Главная<span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/price">Цены<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Цены</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Контакты</a>
+                <a class="nav-link" href="/contact">Контакты</a>
             </li>
           </ul>
         </div>
@@ -43,6 +27,7 @@
     
     <div class='container wrapper-price'>
 
+      <a name="plumbing"></a>
       <h2>Стоимость замены водопроводных труб</h2>
       <table class="table table-hover  table-dark">
         <thead>
@@ -101,6 +86,7 @@
         </tbody>
       </table>
 
+      <a name="canalization"></a>
       <h2>Стоимость замены канализационных труб</h2>
       <table class="table table-hover  table-dark">
         <thead>
@@ -139,6 +125,7 @@
         </tbody>
       </table>
 
+      <a name="radiator"></a>
       <h2>Стоимость замены радиаторов отопления</h2>
       <table class="table table-hover  table-dark">
         <thead>
@@ -182,6 +169,7 @@
         </tbody>
       </table>
 
+      <a name="fixing"></a>
       <h2>Стоимость подключения сантехприборов</h2>
       <table class="table table-hover  table-dark">
         <thead>
@@ -281,12 +269,12 @@
       </table>
 
       <div class="wrapper-call-me">
-        <a href="#">
+        <a href="/contact">
           <span>Звоните сейчас: 066-933-01-58</span><span><img src="../static/img/icons8-звонящий-телефон-80.png" alt=""></span>
         </a>
       </div>
       <div class="wrapper-call-me">
-        <a href="#">
+        <a href="/contact">
           <span>Напишите нам</span><span><img src="../static/img/icons8-сообщение-80.png" alt=""></span>
         </a>
       </div>
@@ -304,5 +292,4 @@
 
   </div>
 
-</body>
-</html>
+{%endblock%}

@@ -5,6 +5,10 @@
     .carousel-caption h2{
         margin-bottom: 80px;
     }
+    .wrapper-price table{
+        margin-bottom: 60px;
+    }
+    
 }
 
 
@@ -33,6 +37,10 @@
     .wrapper-price td{
         padding: 5px;
     }
+    .wrapper-price table{
+        margin-bottom: 55px;
+    }
+    
     .wrapper-contact{
         height: auto;
     }
@@ -128,6 +136,10 @@
         padding: 2px;
         font-size: 12px;
     }
+    .wrapper-price table{
+        margin-bottom: 0px;
+    }
+    
     .form-group{
         margin: 2px;
     }
