@@ -45,7 +45,8 @@ nav{
 
 /* block 4 rubric */
 .wrapper-block-rubric{
-    margin-bottom: 80px;
+    margin: 0px 0px 80px;
+    width: 100%;
 }
 .wrapper-block-rubric div{
     margin: 0;
