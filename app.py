@@ -1,5 +1,5 @@
 import os
-from flask import Flask, redirect, render_template, session, request
+from flask import Flask, redirect, render_template, session, request, flash
 from werkzeug.security import check_password_hash, generate_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///client.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 60 * 1024 * 1024
 photos = UploadSet('photos', IMAGES)
 UPLOAD_FOLDER = 'static/foto/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -92,25 +92,37 @@ def contact():
             email.strip()
         phone = request.form.get('phone').strip()
         text = request.form.get('text')
-        
+        if not name or not email or not text or not phone:
+            return render_template('alert.html', message = 'заполните все поля')
+
         if 'file' in request.files:
-            file = request.files['file']
-            if file and allowed_file(file.filename):
-                filename = secure_filename(file.filename)
-                filename = photos.resolve_conflict(UPLOAD_FOLDER,filename)
-                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                path = UPLOAD_FOLDER + filename
-            else:
-                path = 'static/img/nofoto.png'
+            files_list = request.files.getlist('file')
+            if len(files_list) > 3:
+                return render_template('alert.html', message = 'максимум 10 фото')
+            for file in files_list:
+                if file and allowed_file(file.filename):
+                    filename = secure_filename(file.filename)
+                    filename = photos.resolve_conflict(UPLOAD_FOLDER,filename)
+                    file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                    path = UPLOAD_FOLDER + filename
+                    obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
+                    db.session.add(obj)
+                    db.session.commit()
+                else:
+                    path = 'static/img/nofoto.png'
+                    obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
+                    db.session.add(obj)
+                    db.session.commit()
         else:
             path = 'static/img/nofoto.png'
-        
-        print(path)
-        obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
-        db.session.add(obj)
-        db.session.commit()
-    
-    return redirect('/')
+            obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
+            db.session.add(obj)
+            db.session.commit()
+
+    msg = Message('Hello', sender = email, recipients = ['andrjuxa201185@gmail.com'])
+    msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email)
+    mail.send(msg)
+    return render_template('alert.html', message = 'Ваше письмо отправлено, с вами свяжутся в ближайшее время')
 
 if __name__ == '__main__':
     app.run(debug = True)
