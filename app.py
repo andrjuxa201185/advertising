@@ -21,7 +21,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'andrjuxa201185@gmail.com'
-app.config['MAIL_PASSWORD'] = '0669330158'
+app.config['MAIL_PASSWORD'] = '0669330158mob'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -83,7 +83,9 @@ def price():
 def contact():
     if request.method == "GET":
         return render_template('contact.html')
+
     else:
+        imgs = []
         name = request.form.get('name').strip()
         email = request.form.get('email')
         if not email:
@@ -93,16 +95,18 @@ def contact():
         phone = request.form.get('phone').strip()
         text = request.form.get('text')
         if not name or not email or not text or not phone:
-            return render_template('alert.html', message = 'заполните все поля')
+            return render_template('alert.html', message = 'заполните все поля', clas = 'alert-denger')
 
         if 'file' in request.files:
             files_list = request.files.getlist('file')
-            if len(files_list) > 3:
-                return render_template('alert.html', message = 'максимум 10 фото')
+            if len(files_list) > 10:
+                return render_template('alert.html', message = 'максимум 10 фото', clas = 'alert-denger')
             for file in files_list:
                 if file and allowed_file(file.filename):
                     filename = secure_filename(file.filename)
                     filename = photos.resolve_conflict(UPLOAD_FOLDER,filename)
+                    src = "https://www.pythonanywhere.com/user/santehnik/files/var/www/static/" + filename
+                    imgs.append(src)
                     file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                     path = UPLOAD_FOLDER + filename
                     obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
@@ -120,9 +124,9 @@ def contact():
             db.session.commit()
 
     msg = Message('Hello', sender = email, recipients = ['andrjuxa201185@gmail.com'])
-    msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email)
+    msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email, imgs = imgs)
     mail.send(msg)
-    return render_template('alert.html', message = 'Ваше письмо отправлено, с вами свяжутся в ближайшее время')
+    return render_template('alert.html', message = 'Ваше письмо отправлено, с вами свяжутся в ближайшее время', clas = 'alert-primary')
 
 if __name__ == '__main__':
     app.run(debug = True)
