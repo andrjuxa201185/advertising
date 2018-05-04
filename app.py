@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///client.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 app.secret_key = 'A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
-app.config['MAX_CONTENT_LENGTH'] = 60 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 40 * 1024 * 1024
 photos = UploadSet('photos', IMAGES)
 UPLOAD_FOLDER = 'static/foto/'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
@@ -95,13 +95,13 @@ def contact():
         phone = request.form.get('phone').strip()
         text = request.form.get('text')
         if not name or not email or not text or not phone:
-            return render_template('alert.html', message = 'заполните все поля', clas = 'alert-denger')
+            return render_template('alert.html', message = 'заполните все поля', clas = 'alert-danger')
 
-        if 'file' in request.files:
-            files_list = request.files.getlist('file')
-            if len(files_list) > 10:
-                return render_template('alert.html', message = 'максимум 10 фото', clas = 'alert-denger')
-            for file in files_list:
+        for i in range(5):
+            f = 'file' + str(i + 1)
+            print(f)
+            if f in request.files:
+                file = request.files[f]
                 if file and allowed_file(file.filename):
                     filename = secure_filename(file.filename)
                     filename = photos.resolve_conflict(UPLOAD_FOLDER,filename)
@@ -117,11 +117,11 @@ def contact():
                     obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
                     db.session.add(obj)
                     db.session.commit()
-        else:
-            path = 'static/img/nofoto.png'
-            obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
-            db.session.add(obj)
-            db.session.commit()
+            else:
+                path = 'static/img/nofoto.png'
+                obj = Client(name = name.lower(), text = text, email = email, phone = phone, path = path)
+                db.session.add(obj)
+                db.session.commit()
 
     msg = Message('Hello', sender = email, recipients = ['andrjuxa201185@gmail.com'])
     msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email, imgs = imgs)

@@ -114,6 +114,12 @@ nav{
 .wrapper-price table{
     margin-bottom: 80px;
 }
+.span-file{
+    font-size: 9px;
+}
+label[for="file"]{
+    line-height: 0.8em;
+}
 
 
 /* call-me-bottom */
