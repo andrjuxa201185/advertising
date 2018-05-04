@@ -128,5 +128,10 @@ def contact():
     mail.send(msg)
     return render_template('alert.html', message = 'Ваше письмо отправлено, с вами свяжутся в ближайшее время', clas = 'alert-primary')
 
+@app.route('/sitemap')
+def sitemap():
+    return '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <url><loc>http://santehnik.pythonanywhere.com/</loc> </url></urlset>'
+
+
 if __name__ == '__main__':
     app.run(debug = True)
