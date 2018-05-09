@@ -111,6 +111,10 @@
     nav{
         transition: none;
     }
+    .navbar-toggler{
+        padding-left: 6px;
+        padding-right: 6px;
+    }
     .wrapper-bg-fixed{
         background: url('../static/img/plumbing-840835_640.jpg');
         background-attachment: fixed;
@@ -120,6 +124,8 @@
     }
     #navbar{
         position: relative;
+        padding-left: 0%;
+        padding-right: 0%;
     }
     #carouselExampleControls{
         margin-top: 0px;
