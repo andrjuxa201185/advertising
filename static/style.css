@@ -26,6 +26,7 @@ h1 span{
     left: 160px;
     font-weight: bold;
     transition: all 1s;
+    letter-spacing: 7px;
 }
 #carouselExampleControls{
     margin-top: 10px;

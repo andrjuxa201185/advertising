@@ -102,6 +102,7 @@
         top:24px;
         left:120px;
         transition: none;
+        letter-spacing: 4px;
     }
     .nav-class{
         padding-left: 0px;
