@@ -92,7 +92,12 @@ def contact():
             email = "no_email"
         else:
             email.strip()
-        phone = request.form.get('phone').strip()
+        phone = request.form.get('phone')
+        if not phone:
+            phone = "no_phone"
+        else:
+            phone.strip()
+            
         text = request.form.get('text')
         if not name or not email or not text or not phone:
             return render_template('alert.html', message = 'заполните все поля', clas = 'alert-danger')

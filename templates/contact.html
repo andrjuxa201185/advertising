@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
 
-{%block meta%}
-  Контактная информация о сантехработах в Харькове . Телефон, email, адрес. Задать вопрос о сантехнике.
+{%block meta%}Контактная информация о сантехработах в Харькове . Телефон, email, адрес. Задать вопрос о сантехнике.
+{%endblock%}
+
+{%block title%}
+  Телефон сантехника в Харькове. Задать вопрос о сантехнике.
 {%endblock%}
 
 {%block main%}
@@ -56,7 +59,7 @@
         </div>
 
       <div class="col-lg-6 order-lg-1">
-        <h3 class="h3-contact">Ваш вопрос</h3>
+        <h3 class="h3-contact">Ваш вопрос о сантехработах</h3>
 
           <form action="/contact" method="post" id="sendMessageForm" enctype="multipart/form-data">
             <div class="form-group row">
@@ -74,7 +77,7 @@
             <div class="form-group row">
                 <label for="inputtel" class="col-sm-2 col-form-label">Телефон<span class="star">*</span></label>
                 <div class="col-sm-10">
-                    <input type="tel" name="phone" class="form-control" placeholder="Контактный номер телефона" title="+38-0xx-xxx-xx-xx" required>
+                    <input type="tel" name="phone" class="form-control" placeholder="Контактный номер телефона" title="+38-0xx-xxx-xx-xx">
                 </div>
             </div>
             <div class="form-group row">

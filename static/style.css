@@ -121,6 +121,12 @@ nav{
 label[for="file"]{
     line-height: 0.8em;
 }
+td h3{
+    font-size: inherit;
+    color: inherit;
+    font-weight: inherit;
+    margin: inherit;
+}
 
 
 /* call-me-bottom */
