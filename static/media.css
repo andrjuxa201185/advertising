@@ -47,6 +47,21 @@
     .form-group{
         margin: 10px;
     }
+    /* message */
+    .div-input-message{
+        margin: 7px 0;
+    }
+    .header-message{
+        height: 60px;
+        font-size: 24px;
+    }
+    #divformMessage{
+        border-radius: 60px 3px 60px 3px;
+    }
+    .div-input-message label{
+        width: 20%;
+        font-size: 14px;
+    }
 }
 
 
@@ -84,6 +99,21 @@
     }
     .wrapper-block-rubric{
         margin-bottom: 20px;
+    }
+    /* message */
+    .div-input-message{
+        margin: 5px 0;
+    }
+    .header-message{
+        height: 60px;
+        font-size: 24px;
+    }
+    #divformMessage{
+        border-radius: 60px 3px 60px 3px;
+    }
+    .div-input-message label{
+        width: 20%;
+        font-size: 14px;
     }
 }
 
@@ -180,5 +210,20 @@
     .wrapper-call-me img{
        width: 40px;
        height: auto; 
+    }
+    /* message */
+    .div-input-message{
+        margin: 5px 0;
+    }
+    .header-message{
+        height: 60px;
+        font-size: 22px;
+    }
+    #divformMessage{
+        border-radius: 60px 3px 60px 3px;
+    }
+    .div-input-message label{
+        width: 20%;
+        font-size: 12px;
     }
 }

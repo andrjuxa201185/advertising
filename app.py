@@ -86,12 +86,18 @@ def contact():
 
     else:
         imgs = []
-        name = request.form.get('name').strip()
+        name = request.form.get('name')
+        if not name:
+            name = "no_name"
+        else:
+            name.strip()
+
         email = request.form.get('email')
         if not email:
             email = "no_email"
         else:
             email.strip()
+
         phone = request.form.get('phone')
         if not phone:
             phone = "no_phone"
@@ -99,7 +105,7 @@ def contact():
             phone.strip()
             
         text = request.form.get('text')
-        if not name or not email or not text or not phone:
+        if not name or not email or not phone:
             return render_template('alert.html', message = 'заполните все поля', clas = 'alert-danger')
 
         for i in range(5):
@@ -131,6 +137,7 @@ def contact():
     msg = Message('Hello', sender = email, recipients = ['andrjuxa201185@gmail.com'])
     msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email, imgs = imgs)
     mail.send(msg)
+    
     return render_template('alert.html', message = 'Ваше письмо отправлено, с вами свяжутся в ближайшее время', clas = 'alert-primary')
 
 @app.route('/sitemap')

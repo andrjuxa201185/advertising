@@ -217,3 +217,163 @@ footer p{
     margin-top: 50px;
     text-align: center;
 }
+
+
+/* send message */
+#chat{
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+.close-window-message{
+    position: absolute;
+    top: -37px;
+    left: -5px;
+    z-index: 9999;
+}
+.close-window-message img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.close-window-message:hover img:last-child{
+    display: none;
+}
+@keyframes move{
+    0%{
+        transform: rotate(-3deg) scale(1);
+
+    }
+    20%{
+        transform: rotate(5deg) scale(1.1);
+    }
+    50%{
+        transform: rotate(-5deg) scale(0.9);
+    }
+    75%{
+        transform: rotate(4deg) scale(1.2);
+    }
+    100%{
+        transform: rotate(-3deg) scale(1);
+    }
+}
+#center{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0%;
+    right: 0;
+    margin: auto;
+    z-index: 9990;
+    animation: move 4s infinite ease-in-out;
+    cursor: pointer;
+}
+#center  img:first-child{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 9991;
+}
+#center  img:last-child{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 9990;
+}
+#center:hover img:first-child{
+    display: none;
+}
+#center:hover{
+    animation: none;
+    transform: scale(1.2);
+}
+@keyframes wave{
+    0%{
+        visibility: visible;
+        width: 45px;
+        height: 40px;
+        border-radius: 2px;
+    }
+    50%{
+        opacity: 0.1;
+        border-radius: 50px;
+    }
+    100%{
+        visibility: hidden;
+        width: 160px;
+        height: 160px;
+        border-radius: 80px;
+        opacity: 0;
+    }
+}
+#wave{
+    box-shadow: 0 0 40px 7px rgb(7, 3, 247), 0 0 40px 7px rgb(4, 0, 255) inset;
+    width: 40px;
+    height: 40px;
+    border-radius: 60px;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    bottom: 0%;
+    right: 0;
+    margin: auto;
+    visibility: hidden;
+    animation: wave 3s infinite ease-out;
+}
+#divformMessage{
+    position: fixed;
+    z-index: 9999;
+    width: 0px;
+    max-width: 95%;
+    height: 0px;
+    bottom: 0%;
+    right: 0%;
+    background: burlywood;
+    border-radius: 70px 3px 70px 3px;
+    margin: 5px;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header-message{
+    width: 100%;
+    background: gray;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    border-radius: 70px 3px 70px 3px;
+}
+#formMessage{
+    padding: 5px;
+    
+}
+.form-div{
+    width: 100%;
+}
+.form-div textarea{
+    width: 100%;
+}
+.div-input-message{
+    margin: 5px 0;
+}
+.div-input-message label{
+    width: 20%;
+}
+.div-input-message input{
+    width: 75%;
+}
