@@ -2,6 +2,11 @@ $(document).ready(function() {
     lessNavbar();
     window.addEventListener('scroll', lessNavbar);
     window.addEventListener('resize', lessNavbar);
+    // let img1 = document.getElementById('img1');
+    // window.addEventListener('scroll', function(){
+    //     let sy = (window.pageYOffset - 800)/2;
+    //     img1.style.top = sy + 'px';
+    // });
 
     let ask =  document.getElementById('center');
     ask.addEventListener('click', function(){
@@ -11,7 +16,7 @@ $(document).ready(function() {
         f.style.visibility = 'visible';
         f.style.opacity = 1;
 
-        if (window.innerHeight > 500){
+        if (window.innerHeight > 450){
             f.style.width = '350px';
             f.style.height = '405px';
         }else{
@@ -37,9 +42,6 @@ $(document).ready(function() {
         f.style.visibility = 'hidden';
         f.style.opacity = 0;
     });
-
-    
-
 });
 
 
