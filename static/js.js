@@ -2,11 +2,33 @@ $(document).ready(function() {
     lessNavbar();
     window.addEventListener('scroll', lessNavbar);
     window.addEventListener('resize', lessNavbar);
-    // let img1 = document.getElementById('img1');
-    // window.addEventListener('scroll', function(){
-    //     let sy = (window.pageYOffset - 800)/2;
-    //     img1.style.top = sy + 'px';
-    // });
+
+
+    let img = document.getElementsByClassName('image-scroll');
+    window.addEventListener('scroll', function(){
+        let k = 0;
+        let speed = 3;
+        let o = window.innerWidth / window.innerHeight;
+
+        if(o > 1.70 && window.innerWidth >= 1280){
+            if ( window.innerHeight >= 750 && window.innerWidth > 1400){
+                k = 120;
+                speed = 3;
+            }else if (window.innerHeight < 750 || window.innerWidth < 1400){
+                k = 100;
+                speed = 5;
+            };
+            let sy = (window.pageYOffset - window.innerHeight - k)/speed;
+            let sy2 = (window.pageYOffset - window.innerHeight - (window.innerHeight / 2) - k)/speed;
+            img[0].style.top = sy + 'px';
+            img[1].style.top = sy + 'px';
+            img[2].style.top = sy2 + 'px';
+            img[3].style.top = sy2 + 'px';
+        }
+    });
+
+
+
 
     let ask =  document.getElementById('center');
     ask.addEventListener('click', function(){

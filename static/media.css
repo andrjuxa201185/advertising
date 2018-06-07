@@ -8,7 +8,16 @@
     .wrapper-price table{
         margin-bottom: 60px;
     }
-    
+    .wrapper-block-rubric>div{
+        height: auto;
+    }
+    .wrapper-block-rubric img{
+        width: 100%;
+        position: relative;
+        left: 0%;
+        top: 0%;
+    }
+
 }
 
 
@@ -24,6 +33,7 @@
         margin-top: 20px;
         transition: all 1s;
     }
+
     .carousel-caption h2{
         margin-bottom: 40px;
     }
@@ -65,6 +75,7 @@
     a.button9 {
         font-size: 24px;
     }
+    
 }
 
 
@@ -205,8 +216,6 @@
     .wrapper-call-me{
         margin: 10px 0;
         padding: 3px 0;
-        /* box-shadow: 0 0 20px 5px rgb(0, 38, 255);
-        background: rgba(255, 0, 0, 0.829); */
         transition: none;
     }
     .wrapper-call-me span{
