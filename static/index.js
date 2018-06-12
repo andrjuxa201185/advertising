@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 
     let img = document.getElementsByClassName('image-scroll');
-    if(img[0]){
+    if(img){
         window.addEventListener('scroll', function(){
             let k = 0;
             let speed = 3;
@@ -46,16 +46,16 @@ $(document).ready(function() {
         let flag = true;
         if(flag){
             let buttons = document.getElementsByClassName('button-on-scroll');
-            if(buttons[0]){
+            if (buttons){
                 let top_screen = window.innerHeight + window.pageYOffset;
             
                 for (let i = 0; i < 4; i++) {
                     let top_element = buttons[i].getBoundingClientRect().top + window.pageYOffset;
                     if(top_screen > top_element + 200){
                         buttons[i].style.opacity = 1;
-                    };
-                };
-            };
+                    } 
+                }
+            }
             flag = false;
         }
     });
@@ -65,18 +65,18 @@ $(document).ready(function() {
         let flag = true;
         if(flag){
             let buttons9 = document.getElementsByClassName('button9');
-            if(buttons9[0]){
+            if(buttons9){
                 let top_screen = window.innerHeight + window.pageYOffset;
             
                 for (let i = 0; i < 2; i++) {
                     let top_element = buttons9[i].getBoundingClientRect().top + window.pageYOffset;
                     if(top_screen > top_element + 100){
                         buttons9[i].style.opacity = 1;
-                    };
-                };
-            };
+                    } 
+                }
+            }
             flag = false;
-        };
+        }
     });
 
 
@@ -132,23 +132,22 @@ function lessNavbar(){
     let span = document.querySelector("h1 span");
     let navbar = document.getElementById("navbar");
     let h1 = document.querySelector("h1");
+    let carusel = document.getElementById('carouselExampleControls');
 
-    if(span && navbar && h1){
-        if (window.innerWidth > 576){
-            if (scrY > 80){
-                span.classList.add('display-hidden-span');
-                navbar.classList.add('less-navbar');
-                h1.classList.add('less-font-h1');
-                if (window.innerWidth < 768){
-                    h1.style.marginLeft = "20px";
-                }
-                navbar.classList.add('navbar-expand-sm');
-            }else{
-                span.classList.remove('display-hidden-span');
-                navbar.classList.remove('less-navbar');
-                h1.classList.remove('less-font-h1');
-                navbar.classList.remove('navbar-expand-sm');
-            };
+    if (window.innerWidth > 576){
+        if (scrY > 80){
+            span.classList.add('display-hidden-span');
+            navbar.classList.add('less-navbar');
+            h1.classList.add('less-font-h1');
+            if (window.innerWidth < 768){
+                h1.style.marginLeft = "20px";
+            }
+            navbar.classList.add('navbar-expand-sm');
+        }else{
+            span.classList.remove('display-hidden-span');
+            navbar.classList.remove('less-navbar');
+            h1.classList.remove('less-font-h1');
+            navbar.classList.remove('navbar-expand-sm');
         };
     };
 };
