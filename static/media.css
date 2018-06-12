@@ -1,9 +1,9 @@
 @media (max-width: 1280px) {
-    .wrapper-red-rgba a{
-        font-size: 72px;
-    }
     .carousel-caption h2{
         margin-bottom: 80px;
+    }
+    .inner-button{
+        display: none;
     }
     .wrapper-price table{
         margin-bottom: 60px;
@@ -17,23 +17,18 @@
         left: 0%;
         top: 0%;
     }
-
+    .button-on-scroll{
+        background: rgba(39, 82, 131, 0.63);
+    }
+    
 }
 
 
 @media (max-width: 992px){
-    .wrapper-red-rgba a{
-        font-size: 62px;
-    }
-    .wrapper-red-rgba{
-        display: block;
-        background: rgba(255, 0, 0, 0.1);
-    }
     #carouselExampleControls{
         margin-top: 20px;
         transition: all 1s;
     }
-
     .carousel-caption h2{
         margin-bottom: 40px;
     }
@@ -75,14 +70,13 @@
     a.button9 {
         font-size: 24px;
     }
-    
+    .section-call-me{
+        height: 400px;
+    }
 }
 
 
 @media (max-width: 768px) {
-    .wrapper-red-rgba a{
-        font-size: 52px;
-    }
     .carousel-caption h2{
         margin-bottom: 30px;
     }
@@ -99,6 +93,9 @@
     .wrapper-contact-rubric{
         margin-bottom: 10px;
     }
+    .section-call-me{
+        height: 300px;
+    }
     .wrapper-call-me{
         margin: 10px 0;
         padding: 3px;
@@ -114,9 +111,7 @@
     a.button9 {
         font-size: 20px;
     }
-    .wrapper-block-rubric{
-        margin-bottom: 20px;
-    }
+
     /* message */
     .div-input-message{
         margin: 5px 0;
@@ -136,9 +131,6 @@
 
 
 @media (max-width: 576px) {
-    .wrapper-red-rgba a{
-        font-size: 42px;
-    }
     h1{
         font-size: 30px;
         margin-left: 0%;

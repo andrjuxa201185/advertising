@@ -33,8 +33,11 @@ h1 span{
     border-top: solid 40px #343a40;
 }
 .carousel-caption h2{
-    color: red;
+    color: rgb(180, 180, 180);
+    font-weight: 100;
+    letter-spacing: 2px;
     margin-bottom: 150px;
+    font-size: 26px;
 }
 nav{
     transition: all 1s;
@@ -65,33 +68,9 @@ nav{
     position: relative;
     left: -15%;
     top: -15%;
+    transition: transform 1s ease;
 }
-/* .wrapper-red-rgba{
-    position: absolute;
-    top: 0%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 0, 0, 0.15);
-    display: none;
-} */
-/* .wrapper-red-rgba a{
-    text-decoration: none;
-    font-size: 82px;
-    font-family: 'Caveat', cursive;
-    color: red;
-    display: block;
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-} */
-/* .wrapper-block-rubric div:hover .wrapper-red-rgba{
-    display: block;
-} */
+
 .button-on-scroll{
     position: absolute;
     left: 50%;
@@ -109,9 +88,38 @@ nav{
     font-family: 'Caveat', cursive;
     background: rgba(39, 82, 131, 0.103);
     cursor: pointer;
+    opacity: 0;
+    transition: opacity 2s;
 }
-.button-on-scroll:hover{
+
+/* .button-on-scroll:hover{
     background: rgba(39, 82, 131, 0.877);
+} */
+.inner-button{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.inner-button div{
+    height: 500%;
+    background: rgba(39, 82, 131, 0.877);
+    width: 0;
+    margin-top: -100px;
+    transition: all 0.5s;
+    transform: rotate(-45deg);
+}
+.button-on-scroll span{
+    position: relative;
+    z-index: 9995;
+}
+.button-on-scroll:hover .inner-button div{
+    width: 200%;
 }
 
 
@@ -153,8 +161,7 @@ td h3{
 
 /* call-me-bottom */
 .section-call-me{
-    border: solid 1px black;
-    height: 700px;
+    height: 500px;
     background: url(../static/img/plumbing-840835_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -272,14 +279,22 @@ footer p{
     position: absolute;
     top: 0px;
     left: 0px;
+    transition: all 0.5s ease;
+    transform: rotate(-90deg);
 }
 .close-window-message:hover img:last-child{
-    display: none;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+.close-window-message:not(:hover) img:last-child{
+    transform: rotate(-90deg);
+}
+.close-window-message:hover img:first-child{
+    transform: rotate(90deg);
 }
 @keyframes move{
     0%{
         transform: rotate(-3deg) scale(1);
-
     }
     20%{
         transform: rotate(5deg) scale(1.1);
@@ -377,6 +392,7 @@ footer p{
     transition: all 0.5s ease;
     visibility: hidden;
     opacity: 0;
+    box-shadow: 0 0 25px 5px rgba(128, 128, 128, 0.582);
 }
 
 .header-message{
@@ -433,6 +449,8 @@ a.button9 {
     background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
     background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
     box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+    opacity: 0;
+    transition: opacity 2s ease;
   }
   a.button9:hover {
     transition: .5s linear;

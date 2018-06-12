@@ -18,16 +18,60 @@ $(document).ready(function() {
                 k = 100;
                 speed = 5;
             };
-            let sy = (window.pageYOffset - window.innerHeight - k)/speed;
-            let sy2 = (window.pageYOffset - window.innerHeight - (window.innerHeight / 2) - k)/speed;
+            let sy = (window.pageYOffset - window.innerHeight - k) / speed;
+            let sy2 = (window.pageYOffset - window.innerHeight - (window.innerHeight / 2) - k) / speed;
             img[0].style.top = sy + 'px';
             img[1].style.top = sy + 'px';
             img[2].style.top = sy2 + 'px';
             img[3].style.top = sy2 + 'px';
-        }
+        };
+
+        if (window.innerWidth < 1280){
+            let center_screen = (window.innerHeight / 2);
+            for (let i = 0; i < 4; i++) {
+                let top_img = img[i].getBoundingClientRect().top + (img[i].offsetHeight / 2);
+                if(top_img < center_screen + 70 && top_img > center_screen - 70){
+                    img[i].style.transform = 'scale(1.2)';
+                }else{
+                    img[i].style.transform = 'scale(1)';
+                }
+            }
+        };
     });
 
 
+    window.addEventListener('scroll', function(){
+        let flag = true;
+        if(flag){
+            let buttons = document.getElementsByClassName('button-on-scroll');
+            let top_screen = window.innerHeight + window.pageYOffset;
+        
+            for (let i = 0; i < 4; i++) {
+                let top_element = buttons[i].getBoundingClientRect().top + window.pageYOffset;
+                if(top_screen > top_element + 200){
+                    buttons[i].style.opacity = 1;
+                } 
+            }
+            flag = false;
+        }
+    });
+    
+    
+    window.addEventListener('scroll', function(){
+        let flag = true;
+        if(flag){
+            let buttons9 = document.getElementsByClassName('button9');
+            let top_screen = window.innerHeight + window.pageYOffset;
+        
+            for (let i = 0; i < 2; i++) {
+                let top_element = buttons9[i].getBoundingClientRect().top + window.pageYOffset;
+                if(top_screen > top_element + 100){
+                    buttons9[i].style.opacity = 1;
+                } 
+            }
+            flag = false;
+        }
+    });
 
 
     let ask =  document.getElementById('center');
@@ -54,6 +98,7 @@ $(document).ready(function() {
         }
     });
 
+
     let close_ask = document.getElementsByClassName('close-window-message')[0];
     close_ask.addEventListener('click', function(){
         let f = document.getElementById('divformMessage');
@@ -65,6 +110,11 @@ $(document).ready(function() {
         f.style.opacity = 0;
     });
 });
+
+
+
+
+
 
 
 function lessNavbar(){
