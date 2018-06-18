@@ -51,8 +51,9 @@ $(document).ready(function() {
             
                 for (let i = 0; i < 4; i++) {
                     let top_element = buttons[i].getBoundingClientRect().top + window.pageYOffset;
-                    if(top_screen > top_element + 200){
+                    if(top_screen > top_element + 50){
                         buttons[i].style.opacity = 1;
+                        buttons[i].style.top = '50%';
                     };
                 };
             };
@@ -120,11 +121,6 @@ $(document).ready(function() {
         });
     };
 });
-
-
-
-
-
 
 
 function lessNavbar(){
