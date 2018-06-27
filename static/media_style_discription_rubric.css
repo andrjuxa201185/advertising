@@ -1,0 +1,39 @@
+@media (max-width: 1280px) {
+    .section-description-rubric-div{
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 300px;
+    }
+    
+    .article-description-rubric{
+        font-size: 20px;
+        line-height: 22px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+}
+
+
+@media (max-width: 992px){
+    .section-description-rubric-div{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .article-description-rubric{
+        font-size: 20px;
+        line-height: 20px;
+        padding: 5px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 576px) {
+
+}

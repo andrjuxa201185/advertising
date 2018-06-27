@@ -1,0 +1,48 @@
+.section-description-rubric{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(37, 21, 8);
+    background-image: url(img/fine-floor-1550-1450.700x700па.jpg);
+    background-attachment: fixed;
+    border-top: 4px solid #343a40;
+}
+.border-top_none{
+    border-top: none;
+}
+.section-description-rubric-div{
+    margin: 20px;
+    min-width: 400px;
+}
+
+.section-description-rubric-div-img{
+    width: 100%;
+    height: auto;
+    border: solid 8px white;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+
+.article-description-rubric{
+    text-align: justify;
+    min-width: 400px;
+    margin: 20px 20px 20px 0px;
+    padding: 15px;
+    color: white;
+    border-right: solid 1px white;
+    border-bottom: solid 1px white;
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    user-select: none;
+}
+
+.article-description-rubric_revers{
+    margin: 20px 0px 20px 20px;
+    border-right:none;
+    border-left: solid 1px white;
+    border-bottom:none;
+    border-top: solid 1px white;
+}
+
+
+
