@@ -45,7 +45,6 @@
     .wrapper-price table{
         margin-bottom: 55px;
     }
-    
     .wrapper-contact{
         height: auto;
     }
@@ -67,12 +66,6 @@
         width: 20%;
         font-size: 14px;
     }
-    a.button9 {
-        font-size: 24px;
-    }
-    .section-call-me{
-        height: 400px;
-    }
 }
 
 
@@ -80,36 +73,11 @@
     .carousel-caption h2{
         margin-bottom: 30px;
     }
-    .wrapper-bg-fixed{
-        background: url('../static/img/plumbing840835640.jpg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 75px;
-    }
     .form-group{
         margin: 5px;
     }
     .wrapper-contact-rubric{
         margin-bottom: 10px;
-    }
-    .section-call-me{
-        height: 300px;
-    }
-    .wrapper-call-me{
-        margin: 10px 0;
-        padding: 3px;
-        transition: none;
-    }
-    .wrapper-call-me span{
-        font-size: 22px;
-    }
-    .wrapper-call-me img{
-       width: 64px;
-       height: auto; 
-    }
-    a.button9 {
-        font-size: 20px;
     }
 
     /* message */
@@ -127,9 +95,6 @@
         width: 20%;
         font-size: 14px;
     }
-    
-    /* section-description-rubric */
-
 }
 
 
@@ -157,13 +122,13 @@
         padding-left: 6px;
         padding-right: 6px;
     }
-    .wrapper-bg-fixed{
+    /* .wrapper-bg-fixed{
         background: url('../static/img/plumbing840835640.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 0px;
-    }
+    } */
     #navbar{
         position: relative;
         padding-left: 0%;
@@ -208,22 +173,7 @@
     .wrapper-contact{
         padding: 5px;
     }
-    .wrapper-call-me{
-        margin: 10px 0;
-        padding: 3px 0;
-        transition: none;
-    }
-    .wrapper-call-me span{
-        font-size: 16px;
-        margin-right: 0px;
-    }
-    .wrapper-call-me img{
-       width: 40px;
-       height: auto; 
-    }
-    a.button9 {
-        font-size: 14px;
-    }
+
     /* message */
     .div-input-message{
         margin: 5px 0;

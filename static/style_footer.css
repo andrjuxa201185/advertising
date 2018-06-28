@@ -41,6 +41,7 @@ footer{
 }
 .form-footer *:-moz-placeholder{
     color: rgba(178, 130, 76, 1);
+    font-size: 18px;
 }
 .form-footer *::-webkit-input-placeholder{
     color: rgba(178, 130, 76, 1);
@@ -50,14 +51,11 @@ footer{
     width: auto;
     margin-left: auto;
     margin-right: -6px;
-    /* margin-top: 8px; */
 }
 
 
 /* footer-contact */
-/* .wrapper-contact-rubric-footer{
-    margin-bottom: 5px;
-} */
+
 .wrapper-contact-footer{
     height: 330px;
     border: solid 4px rgba(178, 130, 76, 1);
@@ -70,17 +68,22 @@ footer{
     display: inline-block;
     font-size: 18px;
     color: rgba(178, 130, 76, 1);
+    margin-bottom: 20px;
 }
 .contact-info-footer{
     display: inline-block;
     font-size: 18px;
     color: white;
     color: rgba(178, 130, 76, 1);
+    margin-bottom: 25px;
 }
 .contact-info-footer_time{
     display: block;
     font-size: 18px;
 }
+
+
+
 
 
 /* sitemap */
