@@ -6,6 +6,7 @@
     background-image: url(img/fine-floor-1550-1450.700x700па.jpg);
     background-attachment: fixed;
     border-top: 4px solid #343a40;
+    padding: 30px 0;
 }
 .border-top_none{
     border-top: none;
@@ -34,6 +35,7 @@
     font-family: 'Caveat', cursive;
     font-size: 24px;
     user-select: none;
+    text-shadow: 8px -7px 3px black;
 }
 
 .article-description-rubric_revers{

@@ -20,7 +20,6 @@
     .button-on-scroll{
         background: rgba(39, 82, 131, 0.63);
     }
-    
 }
 
 
@@ -36,6 +35,18 @@
         margin: 10px;
         font-size: 30px;
     }
+    /* .wrapper-price h2{
+        margin: 30px;
+        font-size: 40px;
+        background: linear-gradient(to bottom, rgb(178, 130, 76), rgb(10, 32, 44) );
+        -webkit-background-clip: text;
+        -o-background-clip: text;
+        -moz-background-clip: text;
+        -ms-background-clip: text;
+        color: transparent;
+        padding: 0px;
+        font-weight: bold;
+    } */
     .wrapper-price th{
         padding: 5px;
     }
@@ -45,6 +56,7 @@
     .wrapper-price table{
         margin-bottom: 55px;
     }
+
     .wrapper-contact{
         height: auto;
     }
@@ -122,13 +134,9 @@
         padding-left: 6px;
         padding-right: 6px;
     }
-    /* .wrapper-bg-fixed{
-        background: url('../static/img/plumbing840835640.jpg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .wrapper-bg-fixed{
         padding-top: 0px;
-    } */
+    }
     #navbar{
         position: relative;
         padding-left: 0%;
@@ -142,6 +150,7 @@
     .wrapper-price h2{
         margin: 3px;
         font-size: 20px;
+        color: rgb(10, 32, 44);
     }
     .wrapper-price th{
         display: none;
@@ -151,9 +160,9 @@
         font-size: 12px;
     }
     .wrapper-price table{
-        margin-bottom: 0px;
+        margin-bottom: 20px;
     }
-    
+
     .form-group{
         margin: 2px;
     }
@@ -173,6 +182,7 @@
     .wrapper-contact{
         padding: 5px;
     }
+
 
     /* message */
     .div-input-message{
