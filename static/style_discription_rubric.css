@@ -1,7 +1,6 @@
 .section-description-rubric{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     background-color: rgb(37, 21, 8);
     background-image: url(img/fine-floor-1550-1450.700x700па.jpg);
     background-attachment: fixed;
@@ -18,22 +17,22 @@
 
 .section-description-rubric-div-img{
     width: 100%;
-    height: auto;
     border: solid 8px white;
     opacity: 0;
     transition: opacity 1.5s ease-out;
 }
 
 .article-description-rubric{
+    height: auto;
     text-align: justify;
     min-width: 400px;
     margin: 20px 20px 20px 0px;
-    padding: 15px;
+    padding: 10px;
     color: white;
     border-right: solid 1px white;
     border-bottom: solid 1px white;
     font-family: 'Caveat', cursive;
-    font-size: 24px;
+    font-size: 25px;
     user-select: none;
     text-shadow: 8px -7px 3px black;
 }
@@ -46,5 +45,8 @@
     border-top: solid 1px white;
 }
 
+.discription-img-float-left{
+    display: none;
+}
 
 

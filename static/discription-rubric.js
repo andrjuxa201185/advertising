@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
             if(flag){
                 let top_screen_scroll = window.innerHeight + window.pageYOffset;
             
-                for (let i = 0; i < 2; i++) {
+                for (let i = 0; i < 4; i++) {
                     let topElementInDocument = img_discription[i].getBoundingClientRect().top + window.pageYOffset;
                     if(top_screen_scroll > topElementInDocument + 250){
                         img_discription[i].style.opacity = 1;
