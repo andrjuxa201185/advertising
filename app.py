@@ -20,7 +20,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'andrjuxa201185@gmail.com'
+app.config['MAIL_USERNAME'] = 'kh.santehnik@gmail.com'
 app.config['MAIL_PASSWORD'] = '0669330158mob'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
@@ -134,7 +134,7 @@ def contact():
                 db.session.add(obj)
                 db.session.commit()
 
-    msg = Message('Hello', sender = email, recipients = ['andrjuxa201185@gmail.com'])
+    msg = Message('Hello', sender = email, recipients = ['kh.santehnik@gmail.com'])
     msg.html = render_template('send.html', name = name, phone = phone, text = text, email = email, imgs = imgs)
     mail.send(msg)
     

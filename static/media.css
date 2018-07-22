@@ -35,18 +35,7 @@
         margin: 10px;
         font-size: 30px;
     }
-    /* .wrapper-price h2{
-        margin: 30px;
-        font-size: 40px;
-        background: linear-gradient(to bottom, rgb(178, 130, 76), rgb(10, 32, 44) );
-        -webkit-background-clip: text;
-        -o-background-clip: text;
-        -moz-background-clip: text;
-        -ms-background-clip: text;
-        color: transparent;
-        padding: 0px;
-        font-weight: bold;
-    } */
+
     .wrapper-price th{
         padding: 5px;
     }

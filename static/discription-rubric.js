@@ -1,19 +1,16 @@
 window.addEventListener('load', function(){
-    let img_discription = document.getElementsByClassName('section-description-rubric-div-img');
+    let img_discription = document.getElementsByClassName('section-description-img');
+
     if (img_discription[0]){
         window.addEventListener('scroll', function(){
-            let flag = true;
-            if(flag){
-                let top_screen_scroll = window.innerHeight + window.pageYOffset;
-            
-                for (let i = 0; i < 4; i++) {
-                    let topElementInDocument = img_discription[i].getBoundingClientRect().top + window.pageYOffset;
-                    if(top_screen_scroll > topElementInDocument + 250){
-                        img_discription[i].style.opacity = 1;
-                    };
+            for (let i = 0, len = img_discription.length; i < len; i++) {
+                if(img_discription[i].getBoundingClientRect().top < window.innerHeight - 200){
+                    img_discription[i].style.opacity = 1;
                 };
-                flag = false;
-            }
+                if(img_discription[i].getBoundingClientRect().top >= window.innerHeight){
+                    img_discription[i].style.opacity = 0;
+                };
+            };
         });
     }
 })

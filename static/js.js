@@ -2,84 +2,40 @@ $(document).ready(function() {
     lessNavbar();
     window.addEventListener('scroll', lessNavbar);
     window.addEventListener('resize', lessNavbar);
-
-
-    let img = document.getElementsByClassName('image-scroll');
-    if(img[0]){
-        window.addEventListener('scroll', function(){
-            let k = 0;
-            let speed = 3;
-            let o = window.innerWidth / window.innerHeight;
-
-            if(o > 1.70 && window.innerWidth >= 1280){
-                if ( window.innerHeight >= 750 && window.innerWidth > 1400){
-                    k = 120;
-                    speed = 3;
-                }else if (window.innerHeight < 750 || window.innerWidth < 1400){
-                    k = 100;
-                    speed = 5;
+    
+    if(window.innerWidth >= 1280){
+        let img = document.getElementsByClassName('image-scroll');
+        if(img[0]){
+            window.addEventListener('scroll', function(){
+                let k = (1600 - window.innerWidth);
+                let speed = (window.innerWidth < 1400)? 4 : 3;
+                for (let i = 0; i < 2; i++) {
+                    img[i].style.top = (window.pageYOffset - 1020 + k) / speed + 'px';
                 };
-                let sy = (window.pageYOffset - window.innerHeight - k) / speed;
-                let sy2 = (window.pageYOffset - window.innerHeight - (window.innerHeight / 2) - k) / speed;
-                img[0].style.top = sy + 'px';
-                img[1].style.top = sy + 'px';
-                img[2].style.top = sy2 + 'px';
-                img[3].style.top = sy2 + 'px';
-            };
-
-            if (window.innerWidth < 1280){
-                let center_screen = (window.innerHeight / 2);
-                for (let i = 0; i < 4; i++) {
-                    let top_img = img[i].getBoundingClientRect().top + (img[i].offsetHeight / 2);
-                    if(top_img < center_screen + 70 && top_img > center_screen - 70){
-                        img[i].style.transform = 'scale(1.2)';
-                    }else{
-                        img[i].style.transform = 'scale(1)';
-                    }
-                }
-            };
-        });
+                for (let i = 2; i < 4; i++) {
+                    img[i].style.top = (window.pageYOffset - 1410 + k) / speed + 'px';
+                };
+            });
+        };
     };
 
 
     window.addEventListener('scroll', function(){
-        let flag = true;
-        if(flag){
-            let buttons = document.getElementsByClassName('button-on-scroll');
-            if(buttons[0]){
-                let top_screen = window.innerHeight + window.pageYOffset;
-            
-                for (let i = 0; i < 4; i++) {
-                    let top_element = buttons[i].getBoundingClientRect().top + window.pageYOffset;
-                    if(top_screen > top_element + 50){
-                        buttons[i].style.opacity = 1;
-                        buttons[i].style.top = '50%';
-                    };
+        let buttons = document.getElementsByClassName('button-on-scroll');
+        if(buttons[0]){
+            for (let i = 0, len = buttons.length; i < len; i++) {
+                if(buttons[i].getBoundingClientRect().top < window.innerHeight - 50){
+                    buttons[i].style.opacity = 1;
+                    buttons[i].style.top = '50%';
+                };
+                if(buttons[i].getBoundingClientRect().top >= window.innerHeight){
+                    buttons[i].style.opacity = 0;
+                    buttons[i].style.top = '80%';
                 };
             };
-            flag = false;
-        }
-    });
-    
-    
-    window.addEventListener('scroll', function(){
-        let flag = true;
-        if(flag){
-            let buttons9 = document.getElementsByClassName('button9');
-            if(buttons9[0]){
-                let top_screen = window.innerHeight + window.pageYOffset;
-            
-                for (let i = 0; i < 2; i++) {
-                    let top_element = buttons9[i].getBoundingClientRect().top + window.pageYOffset;
-                    if(top_screen > top_element + 100){
-                        buttons9[i].style.opacity = 1;
-                    };
-                };
-            };
-            flag = false;
         };
     });
-
+    
 
     let ask =  document.getElementById('center');
     if(ask){
@@ -102,8 +58,8 @@ $(document).ready(function() {
                 }else{
                     f.style.height = window.innerHeight - 100 + 'px';
                     f.style.width = '400px';
-                }
-            }
+                };
+            };
         });
     };
 
