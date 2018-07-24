@@ -6,6 +6,7 @@ $(document).ready(function() {
     if(window.innerWidth >= 1280){
         let img = document.getElementsByClassName('image-scroll');
         if(img[0]){
+            
             window.addEventListener('scroll', function(){
                 let k = (1600 - window.innerWidth);
                 let speed = (window.innerWidth < 1400)? 4 : 3;

@@ -110,6 +110,12 @@ footer{
     text-decoration: none;
     font-size: 14px;
 }
+.sitemap-ul-a_h4{
+    font-size: inherit;
+    display: inline;
+    font-weight: inherit;
+    color: inherit;
+}
 .sitemap-ul-a:hover{
     color: #76879fcc;
     text-decoration: none;
