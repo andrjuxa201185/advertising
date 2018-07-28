@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('DOMContentLoaded', function(){
     let formElements = document.getElementsByClassName('footer-form-element');
     let flagForPressText = false;
 

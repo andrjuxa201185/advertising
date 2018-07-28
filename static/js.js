@@ -1,4 +1,5 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+window.addEventListener("DOMContentLoaded", function(){
     lessNavbar();
     window.addEventListener('scroll', lessNavbar);
     window.addEventListener('resize', lessNavbar);

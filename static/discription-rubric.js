@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('DOMContentLoaded', function(){
     let img_discription = document.getElementsByClassName('section-description-img');
 
     if (img_discription[0]){
