@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function(){
     };
 
 
-    window.addEventListener('scroll', function(){
+    window.addEventListener("scroll", function(){
         let buttons = document.getElementsByClassName('button-on-scroll');
         if(buttons[0]){
             for (let i = 0, len = buttons.length; i < len; i++) {
@@ -44,9 +44,14 @@ window.addEventListener("DOMContentLoaded", function(){
         ask.addEventListener('click', function(){
             let f = document.getElementById('divformMessage');
             let chat = document.getElementById('chat');
+            let header = document.getElementsByTagName("header")[0];
+            // let header = document.getElementsByClassName('article-description')[0];
+            let main = document.getElementsByTagName("main")[0];
             chat.style.display = 'none';
             f.style.visibility = 'visible';
             f.style.opacity = 1;
+            main.style.filter = "blur(7px)"
+            
 
             if (window.innerHeight > 450){
                 f.style.width = '350px';
@@ -76,6 +81,8 @@ window.addEventListener("DOMContentLoaded", function(){
             f.style.height = '0px';
             f.style.visibility = 'hidden';
             f.style.opacity = 0;
+            let main = document.getElementsByTagName("main")[0];
+            main.style.filter = "";
         });
     };
 });
