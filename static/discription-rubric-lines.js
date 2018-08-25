@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function(){
     if (div1 && div2){
         window.addEventListener('scroll', function(){
             for (let i = 0 ; i < 2; i++) {
-                if(div1.getBoundingClientRect().top < window.innerHeight - 200){
+                if(div1.getBoundingClientRect().top < window.innerHeight - 300){
                     div1.style.width = "2px";
                     div1.style.height = "100%";
                     div1.addEventListener("transitionend", function(){
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function(){
         window.addEventListener('scroll', function(){
             for (let i = 0 ; i < 2; i++) {
 
-                if(div2Revers.getBoundingClientRect().top < window.innerHeight - 200){
+                if(div2Revers.getBoundingClientRect().top < window.innerHeight - 300){
                     div2Revers.style.height = "2px";
                     div2Revers.style.width = "100%";
                     div2Revers.addEventListener("transitionend", function(){

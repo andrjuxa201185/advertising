@@ -120,6 +120,11 @@ nav{
 .button-on-scroll:hover .inner-button div{
     width: 200%;
 }
+.button-on-scroll:hover{
+    color: black;
+    transition: all .5s;
+    background: rgb(39, 82, 131);
+}
 
 
 /* table-price */
@@ -384,7 +389,6 @@ td h3{
 .div-input-message input{
     width: 75%;
 }
-
 
 
 
