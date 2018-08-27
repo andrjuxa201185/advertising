@@ -1,4 +1,3 @@
-// $(document).ready(function() {
 window.addEventListener("DOMContentLoaded", function(){
     lessNavbar();
     window.addEventListener('scroll', lessNavbar);
@@ -30,10 +29,15 @@ window.addEventListener("DOMContentLoaded", function(){
                     buttons[i].style.opacity = 1;
                     buttons[i].style.top = '50%';
                 };
+
                 if(buttons[i].getBoundingClientRect().top >= window.innerHeight){
                     buttons[i].style.opacity = 0;
                     buttons[i].style.top = '80%';
                 };
+
+                buttons[i].addEventListener("mousedown", buttonDown);
+                buttons[i].addEventListener("mouseup", buttonUp);
+                buttons[i].addEventListener("mouseleave", buttonUp);
             };
         };
     });
@@ -77,10 +81,16 @@ window.addEventListener("DOMContentLoaded", function(){
             f.style.opacity = 0;
         });
     };
+
 });
 
 
-
+function buttonDown(){
+    this.style.transform = "scale(0.98)";
+};
+function buttonUp(){
+    this.style.transform = "scale(1)";
+};
 
 function lessNavbar(){
     let scrY = window.pageYOffset;

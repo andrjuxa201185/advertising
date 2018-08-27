@@ -1,4 +1,5 @@
 function BorderAnimation(elem){
+    if (!elem) return;
     let border = [];
     let styleElem = getComputedStyle(elem);
     let classListBorder = ["border-l","border-t", "border-r", "border-b"];
@@ -47,33 +48,15 @@ function BorderAnimation(elem){
     function showBorder3(){
         border[3].style.width = "100%";
     };
-
-
-
-    // elem.addEventListener("mouseover", borderShow.bind(null, 0, "height"));
-
-    // elem.addEventListener("mouseout", function(){
-    //     elem.style.border = '';
-    //     for (let i = 0; i > 4; i++) {
-    //         border[i].removeEventListener("transitionend", borderShow.bind(null, i, "height"));
-    //     };
-    //     for (let i = 0; i < 4; i++) {
-    //         border[i].style.width = '';
-    //         border[i].style.height = '';
-    //     };
-    // });
-
-    function showBorder(i, style){
-        elem.style.border = "none";
-        border[i].style[style] = "100%";
-    };
 };
 
 
-// style = style == "height" ? "width" : "height";
-// border[i].addEventListener("transitionend", showBorder(null, ++i, style));
 
 window.addEventListener('DOMContentLoaded', function(){
-    let button = document.getElementsByClassName("button-on-scroll")[0];
-    let borderAnimation = new BorderAnimation(button);
+    let buttons = document.getElementsByClassName("button-on-scroll");
+    if (buttons[0]){
+        for (let i = 0; i < buttons.length; i++) {
+            new BorderAnimation(buttons[i]);
+        };
+    };
 });
