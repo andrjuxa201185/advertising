@@ -100,10 +100,11 @@ nav{
 
 /* table-price */
 .wrapper-bg-fixed{
-    background: url('../static/img/drain24546081280cr.jpg');
+    background-image: url('../static/img/drain24546081280cr.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     padding-top: 75px;
 }
 .wrapper-price{

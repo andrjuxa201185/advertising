@@ -51,12 +51,13 @@ function BorderAnimation(elem){
 };
 
 
-
-window.addEventListener('DOMContentLoaded', function(){
-    let buttons = document.getElementsByClassName("button-on-scroll");
-    if (buttons[0]){
-        for (let i = 0; i < buttons.length; i++) {
-            new BorderAnimation(buttons[i]);
+if(window.innerWidth > 992){
+    window.addEventListener('DOMContentLoaded', function(){
+        let buttons = document.getElementsByClassName("button-on-scroll");
+        if (buttons[0]){
+            for (let i = 0; i < buttons.length; i++) {
+                new BorderAnimation(buttons[i]);
+            };
         };
-    };
-});
+    });
+};

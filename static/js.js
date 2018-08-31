@@ -86,10 +86,12 @@ window.addEventListener("DOMContentLoaded", function(){
 
 
 function buttonDown(){
+    this.style.transition = "none";
     this.style.transform = "scale(0.98)";
 };
 function buttonUp(){
     this.style.transform = "scale(1)";
+    this.style.transition = "";
 };
 
 function lessNavbar(){
