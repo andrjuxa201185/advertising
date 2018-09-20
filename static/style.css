@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 /* nav */
 h1{
     font-family: inherit;
@@ -34,7 +33,7 @@ h1 span{
     background-color: rgb(187, 190, 211);
 }
 .visually-hidden{
-    position: absolute;
+    position: fixed;
     width: 1px;
     height: 1px;
     clip: rect(0 0 0 0);
