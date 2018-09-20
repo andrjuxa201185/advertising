@@ -27,12 +27,12 @@ window.addEventListener("DOMContentLoaded", function(){
             for (let i = 0, len = buttons.length; i < len; i++) {
                 if(buttons[i].getBoundingClientRect().top < window.innerHeight - 50){
                     buttons[i].style.opacity = 1;
-                    buttons[i].style.top = '50%';
+                    buttons[i].style.transform = "translate(0, 0)";
                 };
 
                 if(buttons[i].getBoundingClientRect().top >= window.innerHeight){
                     buttons[i].style.opacity = 0;
-                    buttons[i].style.top = '80%';
+                    buttons[i].style.transform = "translate(0, 100px)";
                 };
 
                 buttons[i].addEventListener("mousedown", buttonDown);

@@ -61,3 +61,46 @@ if(window.innerWidth > 992){
         };
     });
 };
+
+
+// function BorderAnimate(elem){
+//     let classListBorder = ["border-l","border-t", "border-r", "border-b"];
+//     let borders = [];
+//     let f = [];
+//     let styleElem = getComputedStyle(elem);
+//     if(!styleElem) return;
+
+//     if (styleElem.position == "static"){
+//         elem.style.position = "relative";
+//     };
+
+//     for (let i = 0; i < 4; i++) {
+//         borders[i] = document.createElement("div");
+//         borders[i].classList.add("border-animation");
+//         borders[i].classList.add(classListBorder[i]);
+//         elem.appendChild(borders[i]);  
+//     };
+
+//     f[0] = animate.bind(null, borders[0], "height", 0);
+
+//     elem.addEventListener("mouseenter", f[0]);
+//     elem.addEventListener("mouseleave", stopAnimate);
+
+
+//     function animate(el, style, i){
+//         borders[i].style[style] = "100%";
+//         style = style == "width" ? "height" : "width";
+//         i++;
+//         if (i > 3) return;
+//         f[i] = animate.bind(null, borders[i], style, i);
+//         borders[i - 1].addEventListener("transitionend", f[i]);
+//     };
+
+//     function stopAnimate(){
+//         for (let i = 3; i >= 0; i--) {
+//             borders[i].removeEventListener("transitionend", f[i + 1]);
+//             borders[i].style.height = "";
+//             borders[i].style.width = "";
+//         };
+//     };
+// };
