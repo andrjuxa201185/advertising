@@ -2,7 +2,7 @@
 
 ## Clone the project:
 
-git clone https://github.com/andrjuxa201185/santex.git
+git clone https://github.com/andrjuxa201185/advertising.git
 
 
 ## Run the project:
